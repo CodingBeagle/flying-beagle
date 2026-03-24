@@ -27,6 +27,18 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(glfw)
 
+# Vulkan - Graphics API (requires Vulkan SDK installed on system)
+find_package(Vulkan REQUIRED)
+
+# vk-bootstrap - Vulkan initialization helper
+FetchContent_Declare(
+    vk-bootstrap
+    GIT_REPOSITORY https://github.com/charles-lunarg/vk-bootstrap.git
+    GIT_TAG v1.3.299
+)
+
+FetchContent_MakeAvailable(vk-bootstrap)
+
 # Set output directories for binaries
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
