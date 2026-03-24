@@ -86,6 +86,11 @@ project/
 
 ## Useful Context for AI Agents
 
+### Build & Execution Instructions
+- **Always attempt to build the solution** after making code changes to verify compilation succeeds
+- **Never run the compiled executable** - building is sufficient for verification
+- Use CMake to configure and compile: `cmake .. -G "Visual Studio 17 2022" && cmake --build . --config Release`
+
 ### What Helps Me Help You Better
 - Be specific about which system you're working on
 - Reference existing code patterns when describing new features
