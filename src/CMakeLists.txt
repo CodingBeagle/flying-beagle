@@ -10,3 +10,8 @@ add_executable(flying_beagle
 target_include_directories(flying_beagle
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../include
 )
+
+# Link libraries
+target_link_libraries(flying_beagle
+    PRIVATE glfw
+)
